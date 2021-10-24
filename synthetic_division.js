@@ -89,7 +89,7 @@ function render(polynomial) {
 
 // run()
 function notgood_code(){
-    let divisor = (document.querySelector("#dividend").value).split(",")
+    let divisor = (document.querySelector("#dividend").value).split(", ")
     console.log("divisor ", divisor)
     let dividend = parseFloat(document.querySelector("#divisor").value)
     let val = synthetic_division(divisor, dividend)
