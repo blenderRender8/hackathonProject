@@ -35,6 +35,7 @@ function quackduck_calculate_grade(weight_list, score_list, max_score_list) {
 var weights = ["#firstareaweight", "#secondareaweight", "#thirdareaweight", "#fourthareaweight", "#fifthareaweight"];
 var maxs = ["#firstareamax", "#secondareamax", "#thirdareamax", "#fourthareamax", "#fifthareamax"];
 var scores = ["#firstareascore", "#secondareascore", "#thirdareascore", "#fourthareascore", "#fifthareascore"];
+var minimums = ["#minimumA", "minimumB", "minimumC", "minimumD"];
 function genlettergrade(scores) {
     if (scores >= parseFloat(document.querySelector("#minimumA").value)) return "A";
     if (scores >= parseFloat(document.querySelector("#minimumB").value)) return "B";
@@ -66,5 +67,8 @@ maxs.forEach(function (x) {
     document.querySelector(x).addEventListener("input", genchanges);
 });
 scores.forEach(function (x) {
+    document.querySelector(x).addEventListener("input", genchanges);
+});
+minimums.forEach(function (x) {
     document.querySelector(x).addEventListener("input", genchanges);
 });
