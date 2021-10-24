@@ -60,5 +60,22 @@ body {
         </td>
 </tbody>
 <p class='a' id="endResult">Quotient and Remainder:</p>
+<button onclick="toggleDark()" class="halflight">Toggle Dark Mode</button>
+	<script>
+      function toggleDark() {
+        if (document.getElementById('title').style.color === 'white'){
+         document.getElementById('title').style.color = 'black';
+          document.body.style.backgroundColor = "white";
+          document.getElementById('body').style.color = 'black';
+          document.querySelector("#body > button").style.setProperty("border-color","black");
+
+        } else {
+           document.getElementById('title').style.color = 'white';
+          document.body.style.backgroundColor = "#393C41";
+          document.getElementById('body').style.color = 'white';
+          document.querySelector("#body > button").style.setProperty("border-color", "white");
+        }
+      }
+	</script>
 </body>
 </html>
