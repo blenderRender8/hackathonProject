@@ -182,15 +182,13 @@ body {
         if (document.getElementById('title').style.color === 'white'){
          document.getElementById('title').style.color = 'black';
           document.body.style.backgroundColor = "white";
-          document.getElementById('body').style.color = 'black';
-	document.getElementByType('p').style.color = 'white';
+          document.getElementByType('body').style.color = 'black';
           document.querySelector("#body > button").style.setProperty("border-color","black");
 
         } else {
            document.getElementById('title').style.color = 'white';
           document.body.style.backgroundColor = "#393C41";
-          document.getElementById('body').style.color = 'white';
-		document.getElementByType('p').style.color = 'black';
+          document.getElementByType('body').style.color = 'white';
           document.querySelector("#body > button").style.setProperty("border-color", "white");
         }
       }
