@@ -32,9 +32,9 @@ function quackduck_calculate_grade(weight_list, score_list, max_score_list) {
     console.log(grade);
     return roundNumber(grade * 100, 2);
 }
-var weights = ["#firstareaweight", "#secondareaweight", "#thirdareaweight", "#fourthareaweight"];
-var maxs = ["#firstareamax", "#secondareamax", "#thirdareamax", "#fourthareamax"];
-var scores = ["#firstareascore", "#secondareascore", "#thirdareascore", "#fourthareascore"];
+var weights = ["#firstareaweight", "#secondareaweight", "#thirdareaweight", "#fourthareaweight, #fifthareaweight"];
+var maxs = ["#firstareamax", "#secondareamax", "#thirdareamax", "#fourthareamax", "#fifthareamax"];
+var scores = ["#firstareascore", "#secondareascore", "#thirdareascore", "#fourthareascore", "fifthareascore"];
 function genchanges() {
     var weightelems = [];
     weights.forEach(function (i) {
