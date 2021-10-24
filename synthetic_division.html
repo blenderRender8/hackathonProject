@@ -17,7 +17,6 @@ body {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -29,8 +28,9 @@ body {
   background-color: #04AA6D;
   color: white;
 }
-.a{padding:20px;}
-.title{padding:20px;}
+.main {
+  padding:20px;
+}
 </style>
 <div class="topnav">
             <a href="index.html">Home</a>
@@ -40,10 +40,8 @@ body {
 	<a class="active" href = "synthetic_division.html">Synthetic Division</a>
 </div>
 </head>
-	<h1 class="title">Synthetic Division Calculator</h1>
-	<p class="a">Before you see the calculator, I would like to credit this calculator for around 2 hours and 54 minutes of insanity. Thank you very much for taking a look at our projects."</p>
-<body class="a" id="title">
-<tbody>
+<body>
+<tbody class="main">
 		<tr>
 			<td>
 				<label for="dividendLabel">Dividend (equation you divide) Enter in a list like this (x^2 + x + 1) => 1, 1, 1:</label>
@@ -59,23 +57,6 @@ body {
           <input type="number" id="divisor" step="1">
         </td>
 </tbody>
-<p class='a' id="endResult">Quotient and Remainder:</p>
-<button onclick="toggleDark()" class="halflight">Toggle Dark Mode</button>
-	<script>
-      function toggleDark() {
-        if (document.getElementById('title').style.color === 'white'){
-         document.getElementById('title').style.color = 'black';
-          document.body.style.backgroundColor = "white";
-          document.getElementById('body').style.color = 'black';
-          document.querySelector("#body > button").style.setProperty("border-color","black");
-
-        } else {
-           document.getElementById('title').style.color = 'white';
-          document.body.style.backgroundColor = "#393C41";
-          document.getElementById('body').style.color = 'white';
-          document.querySelector("#body > button").style.setProperty("border-color", "white");
-        }
-      }
-	</script>
+<p id="endResult">Quotient and Remainder:</p>
 </body>
 </html>
