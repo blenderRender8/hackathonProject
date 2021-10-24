@@ -77,10 +77,9 @@ function render(polynomial) {
     }
     console.log(f"divisor: {divisor}\nquotient: {render(list(answer[0]))}{rem}");
 // }
-
-run()
 divisor = synthetic_division(document.querySelector("#divisor")
 dividend = synthetic_division(document.querySelector("#dividend")
 console.log(divisor)
 console.log(dividend)
 document.querySelector("#endScore").innerText = "Overall Grade: " + synthetic_division(dividend, divisor)
+run()
