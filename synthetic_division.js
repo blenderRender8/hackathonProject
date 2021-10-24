@@ -79,4 +79,5 @@ function render(polynomial: number[]) {
 // }
 
 run()
-document.querySelector("#endScore").innerText = "Overall Grade: " + synthetic_division(#dividend, #divisor)
+
+document.querySelector("#endScore").innerText = "Overall Grade: " + synthetic_division(document.querySelector("#dividend"), document.querySelector("#divisor"))
