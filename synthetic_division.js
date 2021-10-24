@@ -1,4 +1,4 @@
-function synthetic_division(polynomial: string[], factor: number) {
+function synthetic_division(polynomial, factor) {
     let result = [polynomial[0]];
     for (var i = 1; i < len(polynomial)), i++) {
         result.push(polynomial[i] + (result[i - 1] * factor));
@@ -7,7 +7,7 @@ function synthetic_division(polynomial: string[], factor: number) {
     return [result, remainder];
 }
 
-function to_sup(s: number) {
+function to_sup(s) {
     let sups = ['⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'];
     if (s == 1) {
         return "";
@@ -19,7 +19,7 @@ function to_sup(s: number) {
     return result.join('');
 }
 
-function render(polynomial: number[]) {
+function render(polynomial) {
     let val = "";
     let term = "";
     for (var i = 0; i < polynomial.length - 1; i++) {
