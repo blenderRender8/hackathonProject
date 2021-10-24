@@ -46,7 +46,7 @@ function render(polynomial) {
             val += term;
         }
     }
-    let constant = parseFloat(polynomial[-1]);
+    let constant = parseFloat(polynomial[polynomial.length - 1]);
     console.log(constant);
     if (constant > 0 && polynomial.length > 1) {
         val += "+";
