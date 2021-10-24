@@ -15,7 +15,7 @@ function to_sup(s) {
     if (s == 1) return "";
     s = s.toString()
     return s.sup();
-    // let sups = ['⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'];
+    // let sups = ['â°', 'Â¹', 'Â²', 'Â³', 'â´', 'âµ', 'â¶', 'â·', 'â¸', 'â¹'];
     // if (s == 1) {
     //     return "";
     // }
@@ -61,7 +61,7 @@ function render(polynomial) {
 // //     while (true) {
 // //         try {
 // //             console.log("What is your polynomial without variables?");
-//             // polynomial = list(map(int, input("example: x³ + 5x - 2 becomes 1 0 5 -2 > ").split(" ")));
+//             // polynomial = list(map(int, input("example: xÂ³ + 5x - 2 becomes 1 0 5 -2 > ").split(" ")));
 // //             if (polynomial.length > 1) {
 // //                 break;
 // //             } else {
