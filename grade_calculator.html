@@ -40,7 +40,7 @@ body {
 </div>
 </head>
 	<h1 class="title" id="title">Productivity's Grade Calculator</h1>
-<body>
+<body id="body">
 	<p class="a">This grade calculator has 5 input slots! Input the weights as an <strong>integer</strong>. For example, if a category was weighted to be 40% of your grade, you would enter "40" in the input.</p>
 <table>
 	<tbody>
@@ -182,13 +182,13 @@ body {
         if (document.getElementById('title').style.color === 'white'){
          document.getElementById('title').style.color = 'black';
           document.body.style.backgroundColor = "white";
-          document.getElementByType('body').style.color = 'black';
+          document.getElementById('body').style.color = 'black';
           document.querySelector("#body > button").style.setProperty("border-color","black");
 
         } else {
            document.getElementById('title').style.color = 'white';
           document.body.style.backgroundColor = "#393C41";
-          document.getElementByType('body').style.color = 'white';
+          document.getElementById('body').style.color = 'white';
           document.querySelector("#body > button").style.setProperty("border-color", "white");
         }
       }
