@@ -26,15 +26,15 @@ function quackduck_calculate_grade(weight_list, score_list, max_score_list) {
         }
     }
     for (var k = 0; k < weight_list.length; k++) {
-        var to_add = (weight_list[k]) * (score_list[k]) / (max_score_list[k] || 0);
+        var to_add = (weight_list[k]) * (score_list[k]) / (max_score_list[k] || 1);
         grade += (to_add || 0);
     }
     console.log(grade);
     return roundNumber(grade * 100, 2);
 }
-var weights = ["#firstareaweight", "#secondareaweight", "#thirdareaweight", "#fourthareaweight, #fifthareaweight"];
+var weights = ["#firstareaweight", "#secondareaweight", "#thirdareaweight", "#fourthareaweight", "#fifthareaweight"];
 var maxs = ["#firstareamax", "#secondareamax", "#thirdareamax", "#fourthareamax", "#fifthareamax"];
-var scores = ["#firstareascore", "#secondareascore", "#thirdareascore", "#fourthareascore", "fifthareascore"];
+var scores = ["#firstareascore", "#secondareascore", "#thirdareascore", "#fourthareascore", "#fifthareascore"];
 function genchanges() {
     var weightelems = [];
     weights.forEach(function (i) {
