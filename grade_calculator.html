@@ -5,7 +5,7 @@
 	</script>
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 <style>
-body {
+body, th {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -44,6 +44,12 @@ body {
 	<p class="a">This grade calculator has 5 input slots! Input the weights as an <strong>integer</strong>. For example, if a category was weighted to be 40% of your grade, you would enter "40" in the input.</p>
 <table>
 	<tbody>
+    
+    <th> Weights (in %) </th>
+    <th></th>
+    <th> Max Score </th>
+    <th></th>
+    <th> First Area Score </th>
 	<tr>
 		<td>
 			<label for="firstareaweight">1st Area Weight:</label>
@@ -148,7 +154,6 @@ body {
         <td>
           <input type="number" id="minimumD" step="1">
         </td>
-	      <td><p id="letterGrade">Letter Grade <strong>HERE</strong></p></td>
       </tr>
       <tr>
         <td>
@@ -173,6 +178,7 @@ body {
       <tr>
         <td>
           <p id="endScore">Overall Grade:</p>
+          <p id="letterGrade">Letter Grade: </p>
         </td>
     </tr></tbody>
     </table>

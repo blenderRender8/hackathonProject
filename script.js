@@ -35,6 +35,13 @@ function quackduck_calculate_grade(weight_list, score_list, max_score_list) {
 var weights = ["#firstareaweight", "#secondareaweight", "#thirdareaweight", "#fourthareaweight", "#fifthareaweight"];
 var maxs = ["#firstareamax", "#secondareamax", "#thirdareamax", "#fourthareamax", "#fifthareamax"];
 var scores = ["#firstareascore", "#secondareascore", "#thirdareascore", "#fourthareascore", "#fifthareascore"];
+function genlettergrade(scores) {
+    if (scores >= parseFloat(document.querySelector("#minimumA").value)) return "A";
+    if (scores >= parseFloat(document.querySelector("#minimumB").value)) return "B";
+    if (scores >= parseFloat(document.querySelector("#minimumC").value)) return "C";
+    if (scores >= parseFloat(document.querySelector("#minimumD").value)) return "D";
+    return "F";
+}
 function genchanges() {
     var weightelems = [];
     weights.forEach(function (i) {
@@ -48,7 +55,9 @@ function genchanges() {
     maxs.forEach(function (i) {
         maxscoreelms.push((parseFloat(document.querySelector(i).value)) || 0);
     });
-    document.querySelector("#endScore").innerText = "Overall Grade: " + quackduck_calculate_grade(weightelems, scoreelems, maxscoreelms);
+    let val = quackduck_calculate_grade(weightelems, scoreelems, maxscoreelms);
+    document.querySelector("#endScore").innerText = "Overall Grade: " + val;
+    document.querySelector("#letterGrade").innerText = "Letter Grade: " + genlettergrade(val);
 }
 weights.forEach(function (x) {
     document.querySelector(x).addEventListener("input", genchanges);
